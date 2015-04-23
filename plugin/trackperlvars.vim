@@ -3,6 +3,7 @@
 " Last change:  Sun May 18 11:40:10 EST 2014
 " Maintainer:   Damian Conway
 " License:  This file is placed in the public domain.
+" Link: https://github.com/thoughtstream/Damian-Conway-s-Vim-Setup/blob/master/plugin/trackperlvars.vim
 
 " If already loaded, we're done...
 if exists("loaded_trackperlvars")
