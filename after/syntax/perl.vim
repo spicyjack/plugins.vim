@@ -21,6 +21,9 @@ syn keyword perlStatementList     any all none notall true false firstidx
             \                     each_arrayref pairwise natatime mesh zip
             \                     uniq minmax
 
+" Subroutines from Rex
+syn keyword perlStatementList     batch desc task
+
 " Subroutines from Test::More.
 syn keyword perlStatementTest     use_ok require_ok ok is isnt diag like unlike
             \                     cmp_ok is_deeply skip can_ok isa_ok pass fail
