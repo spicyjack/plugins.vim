@@ -22,7 +22,8 @@ syn keyword perlStatementList     any all none notall true false firstidx
             \                     uniq minmax
 
 " Subroutines from Rex
-syn keyword perlStatementList     batch desc task
+syn keyword perlStatementList     batch cache desc environment groups_file
+            \                     path sayformat set task user
 
 " Subroutines from Test::More.
 syn keyword perlStatementTest     use_ok require_ok ok is isnt diag like unlike
