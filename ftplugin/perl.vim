@@ -34,7 +34,12 @@ perl << EOP
             my $sub_qr = qr/^\s*sub\s+(\w+)\b/;
             my $package_qr = qr/^package (main)/;
             my $method_qr = qr/^\s*method\s+(\w+)\s+\{/;
-            if ( $line =~ /$sub_qr|$package_qr|$method_qr/ ) {
+            my $task_qr = qr/^task[ \t]* "(\w+)"\s{0,},/;
+            my $taskq_qr = qr/^task[ \t]*q{1,2}\((\w+)\)\s{0,},/;
+            my $batch_qr = qr/^batch[ \t]* "(\w+)"\s{0,},/;
+            my $batchq_qr = qr/^batch[ \t]*q{1,2}\((\w+)\)\s{0,},/;
+            my $rex_qr = qr/$task_qr|$taskq_qr|$batch_qr|$batchq_qr/;
+            if ( $line =~ /$sub_qr|$package_qr|$method_qr|$rex_qr/ ) {
                 if ( $1 ) {
                     $sub_name = $1;
                 } elsif ( $2 ) {
