@@ -21,9 +21,20 @@ syn keyword perlStatementList     any all none notall true false firstidx
             \                     each_arrayref pairwise natatime mesh zip
             \                     uniq minmax
 
-" Subroutines from Rex
-syn keyword perlStatementList     batch cache desc environment groups_file
-            \                     path sayformat set task user
+" Methods/Functions from Rex (Rex DSL)
+" Borrowed from https://gist.github.com/ferki/d83ebd67ce828ef9d00f
+syn keyword perlStatementScalar     cache cat desc ensure extract groups_file 
+            \                       LOCAL needs password path private_key 
+            \                       public_key rm sayformat sudo sudo_password 
+            \                       unlink update_package_db update_system user
+syn keyword perlStatementList       account append_if_no_such_line 
+            \                       append_or_amend_line batch chgrp chmod 
+            \                       chown clearpart cmdb cp create_user
+            \                       cron_entry file get ln pkg run run_task 
+            \                       say sed service symlink task template
+syn keyword perlStatementHash       environment set
+syn keyword perlString              FALSE TRUE
+syn match   perlStatementHash       "auth for"
 
 " Subroutines from Test::More.
 syn keyword perlStatementTest     use_ok require_ok ok is isnt diag like unlike
