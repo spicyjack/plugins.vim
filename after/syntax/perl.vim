@@ -36,6 +36,10 @@ syn keyword perlStatementHash       environment set
 syn keyword perlString              FALSE TRUE
 syn match   perlStatementHash       "auth for"
 
+" Methods/functions from Mo[o|use|ose]
+syn keyword perlStatementScalar     has
+syn keyword perlStatementList       requires
+
 " Subroutines from Test::More.
 syn keyword perlStatementTest     use_ok require_ok ok is isnt diag like unlike
             \                     cmp_ok is_deeply skip can_ok isa_ok pass fail
