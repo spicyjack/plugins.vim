@@ -40,6 +40,10 @@ syn match   perlStatementHash       "auth for"
 syn keyword perlStatementScalar     has
 syn keyword perlStatementList       requires
 
+" Methods/functions from Mojolicious
+syn keyword perlStatementScalar   app plugin
+syn keyword perlStatementIOfunc   post
+
 " Subroutines from Test::More.
 syn keyword perlStatementTest     use_ok require_ok ok is isnt diag like unlike
             \                     cmp_ok is_deeply skip can_ok isa_ok pass fail
